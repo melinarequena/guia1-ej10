@@ -52,7 +52,7 @@ void llenar(Usuario * usuario, Lista * lista){
     }
 }
 
-void listar(Usuario * usuario, Lista * lista, float consumoMinimo, float importeP, float importeC){
+void listar(Lista * lista, float consumoMinimo, float importeP, float importeC){
     Usuario * auxUsuario = lista->cabecera;
     while(auxUsuario!=NULL){
         if(auxUsuario->consumo>consumoMinimo){
@@ -66,7 +66,7 @@ void listar(Usuario * usuario, Lista * lista, float consumoMinimo, float importe
     }
 }
 
-void nombreYConsumoP(Usuario * usuario, Lista * lista) {
+void nombreYConsumoP(Lista * lista) {
     int cont = 0;
     float suma = 0;
     Usuario *auxUsuario = lista->cabecera;
@@ -83,7 +83,7 @@ void nombreYConsumoP(Usuario * usuario, Lista * lista) {
            suma / cont); //Es necesario el casting? El ide me marca warning
 }
 
-void maxConsumoC(Usuario * usuario, Lista * lista){
+void maxConsumoC(Lista * lista){
     Usuario * auxUsuario = lista->cabecera;
     float max=auxUsuario->consumo;
     char maxUsuario [20];
@@ -99,7 +99,7 @@ void maxConsumoC(Usuario * usuario, Lista * lista){
     printf("El usuario C con mayor consumo (%.2f) tiene direccion en %s", max, maxUsuario);
 }
 
-void totalYMin(Usuario * usuario, Lista * lista, float consumoMinimo, float importeP, float importeC){
+void totalYMin(Lista * lista, float consumoMinimo, float importeP, float importeC){
     float suma=0;
     int contC=0, contP=0;
     Usuario * auxUsuario = lista->cabecera;
