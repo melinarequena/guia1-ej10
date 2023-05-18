@@ -17,13 +17,13 @@ abonen el mínimo.*/
 
 int main(){
     Lista * lista = newLista();
-llenar(newUsuario('Melina', 1, 'Maure', 1740, 'P', 1426), lista);
-llenar(newUsuario('Felipe', 4, 'Guayaquil', 2075, 'P', 2500), lista);
-llenar(newUsuario('Lisa', 1, 'Maure', 1740, 'P', 360), lista);
-llenar(newUsuario('Sergio', 2, 'Maipu', 1425, 'C', 26), lista);
-llenar(newUsuario('Lola', 2, 'Zabala', 1742, 'C', 14026), lista);
-llenar(newUsuario('Belen', 2, 'Vergara', 2403, 'C', 1426), lista);
-llenar(newUsuario('Sol', 2, 'Libertador', 5599, 'P', 20), lista);
+llenar(newUsuario("Melina", 1, "Maure", 1740, 'P', 1426), lista);
+llenar(newUsuario("Felipe", 4, "Guayaquil", 2075, 'P', 2500), lista);
+llenar(newUsuario("Lisa", 1, "Maure", 1740, 'P', 360), lista);
+llenar(newUsuario("Sergio", 2, "Maipu", 1425, 'C', 26), lista);
+llenar(newUsuario("Lola", 2, "Zabala", 1742, 'C', 14026), lista);
+llenar(newUsuario("Belen", 2, "Vergara", 2403, 'C', 1426), lista);
+llenar(newUsuario("Sol", 2, "Libertador", 5599, 'P', 20), lista);
 
 listar(lista, 20, 30, 40);
 nombreYConsumoP(lista);

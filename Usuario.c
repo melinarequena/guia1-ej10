@@ -57,9 +57,9 @@ void listar(Lista * lista, float consumoMinimo, float importeP, float importeC){
     while(auxUsuario!=NULL){
         if(auxUsuario->consumo>consumoMinimo){
             if(auxUsuario->categoria == 'P') {
-                printf("El usuario %s, de categoria P, domicilio en calle %s %d, ha registrado un consumo de %.2f, por lo que su importe es de: \n$%.2f", auxUsuario->nombre, auxUsuario->calle, auxUsuario->numCalle, auxUsuario->consumo, auxUsuario->consumo*importeP);
+                printf("El usuario %s, de categoria P, domicilio en calle %s %d, ha registrado un consumo de %.2f, por lo que su importe es de: \n$%.2f\n", auxUsuario->nombre, auxUsuario->calle, auxUsuario->numCalle, auxUsuario->consumo, auxUsuario->consumo*importeP);
             }else{
-                printf("El usuario %s, de categoria C, domicilio en calle %s %d, ha registrado un consumo de %.2f, por lo que su importe es de: \n$%.2f",auxUsuario->nombre, auxUsuario->calle, auxUsuario->numCalle, auxUsuario->consumo, auxUsuario->consumo*importeC);
+                printf("El usuario %s, de categoria C, domicilio en calle %s %d, ha registrado un consumo de %.2f, por lo que su importe es de: \n$%.2f\n",auxUsuario->nombre, auxUsuario->calle, auxUsuario->numCalle, auxUsuario->consumo, auxUsuario->consumo*importeC);
             }
         }
         auxUsuario=auxUsuario->sig;
@@ -73,13 +73,13 @@ void nombreYConsumoP(Lista * lista) {
     printf("Usuarios particulares:\n");
     while (auxUsuario != NULL) {
         if (auxUsuario->categoria = 'P') {
-            suma = auxUsuario->consumo;
+            suma = suma + auxUsuario->consumo;
             cont++;
             printf("%s\n", auxUsuario->nombre);
         }
         auxUsuario = auxUsuario->sig;
     }
-    printf("El promedio de consumo de usuarios particulares es de %.2f",
+    printf("El promedio de consumo de usuarios particulares es de %.2f\n",
            suma / cont); //Es necesario el casting? El ide me marca warning
 }
 
